@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>{{pageTitle}}</title>
+</head>
+
+<body>
+  <!-- here we declare the header partial-->
+  {{> header}}
+  <!-- here we call the screamIt helper and we call the welcomeMessage
+  template-->
+    <p>{{screamIt welcomeMessage}}</p>
+
+<!-- here we declare the template partial-->
+    {{> footer}}
+</body>
+</html>
