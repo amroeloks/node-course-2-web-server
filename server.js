@@ -100,6 +100,18 @@ app.get('/about', (req, res) => {
   });
 });
 
+//here we define another route
+//forward slash is followed by any name
+//similiar to name an html document
+app.get('/project', (req, res) => {
+  //res.send('About page');
+  //here instead of sending the html page
+  //we render the hbs template file
+  res.render('project.hbs', {
+    pageTitle: 'Project Page'
+    //currentYear: new Date().getFullYear()
+  });
+});
 
 //here we will define another route
 //this route will be for when data is bad
