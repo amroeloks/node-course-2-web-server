@@ -5,6 +5,8 @@ const express = require('express');
 const hbs = require('hbs');
 //here we declare the filesystem module
 const fs = require('fs');
+//here we declare a port
+const port = process.env.PORT || 3000;
 
 //here we create a new app, by using the express method
 let app = express();
@@ -108,7 +110,7 @@ app.get('/bad', (req, res) => {
 });
 
 //and the app is being listened on local host por 3000
-app.listen(3000, () => {
+app.listen(port, () => {
   //here we let the user know the server is up an running
-  console.log('server is up on port:3000')
+  console.log(`server is up on port: ${port}`);
 });
